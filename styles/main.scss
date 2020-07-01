@@ -1,0 +1,581 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 52.5%;
+
+  @media only screen and(min-width: 1500px) {
+    font-size: 62.5%;
+  }
+
+  @media only screen and(min-width: 1600px) {
+    font-size: 72.5%;
+  }
+
+  @media only screen and(min-width: 1900px) {
+    font-size: 82.5%;
+  }
+
+  @media only screen and(min-width: 2200px) {
+    font-size: 92.5%;
+  }
+
+  @media only screen and(min-width: 2600px) {
+    font-size: 112.5%;
+  }
+
+  @media only screen and(min-width: 3300px) {
+    font-size: 132.5%;
+  }
+
+  @media only screen and(min-width: 4400px) {
+    font-size: 182.5%;
+  }
+}
+
+$bg-intro-signup: hsl(217, 28%, 15%);
+$bg-main: hsl(218, 28%, 13%);
+$bg-footer: hsl(216, 53%, 9%);
+$bg-testimonials: hsl(219, 30%, 18%);
+
+body {
+  font-family: "Open Sans", sans-serif;
+  background-color: $bg-intro-signup;
+  padding-top: 7vh;
+
+  @media only screen and(max-width: 600px) {
+    padding-top: 4vh;
+  }
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  margin-bottom: 7rem;
+  padding: 0 10rem;
+
+  @media only screen and(max-width: 600px) {
+    padding: 0 3rem;
+  }
+
+  &__logo {
+    margin-right: auto;
+
+    @media only screen and(max-width: 600px) {
+      max-width: 30%;
+      height: auto;
+    }
+  }
+
+  &__links {
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+    font-family: "Raleway", sans-serif;
+    font-size: 1.7rem;
+    font-weight: 400;
+
+    @media only screen and(max-width: 600px) {
+      font-size: 1.2rem;
+    }
+  }
+
+  &__link {
+    margin-right: 3rem;
+
+    & a:link,
+    & a:visited {
+      color: white;
+      text-decoration: none;
+      transition: all 0.3s ease;
+
+      &:hover {
+        border-bottom: 1px solid white;
+      }
+    }
+  }
+}
+
+.intro-image {
+  max-width: 100%;
+  height: auto;
+}
+
+.title {
+  &__intro {
+    font-size: 4rem;
+    color: white;
+    font-weight: 700;
+    width: 60%;
+    margin: 3rem auto;
+    font-family: "Raleway", sans-serif;
+
+    @media only screen and(max-width: 900px) {
+      width: 80%;
+    }
+
+    @media only screen and(max-width: 600px) {
+      width: 100%;
+    }
+  }
+
+  &__hiw {
+    font-size: 4rem;
+    color: white;
+    font-weight: 700;
+
+    margin-bottom: 3rem;
+    font-family: "Raleway", sans-serif;
+
+    @media only screen and(max-width: 600px) {
+      font-size: 2rem;
+    }
+  }
+
+  &__form {
+    font-size: 3rem;
+    color: white;
+    font-weight: 700;
+
+    margin: 3rem auto;
+    font-family: "Raleway", sans-serif;
+  }
+}
+
+.paragraph {
+  &__intro {
+    font-size: 1.8rem;
+    line-height: 1.5;
+    color: white;
+    font-weight: 400;
+    font-family: "Raleway", sans-serif;
+    width: 40%;
+    margin: 0 auto 2rem auto;
+
+    @media only screen and(max-width: 900px) {
+      width: 80%;
+    }
+
+    @media only screen and(max-width: 600px) {
+      width: 100%;
+    }
+  }
+
+  &__hiw {
+    font-size: 1.8rem;
+    line-height: 1.2;
+    color: white;
+    font-weight: 400;
+    font-family: "Raleway", sans-serif;
+
+    margin-bottom: 2rem;
+  }
+
+  &__review {
+    font-size: 1.6rem;
+    color: white;
+    line-height: 1.5;
+    font-family: "Raleway", sans-serif;
+  }
+
+  &__username {
+    font-size: 1.4rem;
+    color: white;
+    font-weight: 700;
+  }
+
+  &__job {
+    font-size: 1.2rem;
+    color: white;
+    font-weight: 400;
+  }
+
+  &__form {
+    font-size: 1.6rem;
+    color: white;
+    line-height: 1.5;
+    font-family: "Raleway", sans-serif;
+    width: 90%;
+    margin: 0 auto 2rem auto;
+  }
+}
+
+.form {
+  display: flex;
+  justify-content: space-between;
+
+  @media only screen and(max-width: 1200px) {
+    flex-direction: column;
+  }
+
+  &__input {
+    width: 65%;
+    border: 0;
+    border-radius: 5rem;
+    padding: 1.3rem 3rem;
+
+    &::placeholder {
+      color: rgba(black, 0.4);
+    }
+
+    @media only screen and(max-width: 1200px) {
+      width: 100%;
+      margin-bottom: 2rem;
+    }
+  }
+
+  &__btn-large {
+    padding: 1.5rem 3rem;
+    background-image: linear-gradient(
+      to right,
+      hsl(176, 68%, 64%),
+      hsl(198, 60%, 50%)
+    );
+    border: none;
+    border-radius: 5rem;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: white;
+    cursor: pointer;
+    transition: all 0.5s ease;
+
+    &:hover {
+      box-shadow: 0 0.3rem 1rem black;
+      transform: scale(1.1);
+    }
+
+    @media only screen and(max-width: 1200px) {
+      width: 100%;
+    }
+  }
+}
+
+.btn-large {
+  padding: 2rem 10rem;
+  background-image: linear-gradient(
+    to right,
+    hsl(176, 68%, 64%),
+    hsl(198, 60%, 50%)
+  );
+  border: none;
+  border-radius: 5rem;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: white;
+  cursor: pointer;
+  transition: all 0.5s ease;
+
+  &:hover {
+    box-shadow: 0 0.3rem 1rem black;
+    transform: scale(1.1);
+  }
+}
+
+.btn-small {
+  padding: 0.5rem 0;
+  color: hsl(176, 68%, 64%);
+  border-bottom: 1px solid hsl(176, 68%, 64%);
+  background-color: transparent;
+  font-size: 1.4rem;
+  display: flex;
+  align-items: center;
+  display: inline-block;
+  cursor: pointer;
+  transition: all 0.5s ease;
+
+  & img {
+    margin-bottom: -0.3rem;
+    margin-left: 0.3rem;
+  }
+
+  &:hover {
+    box-shadow: 0 0.3rem 1rem black;
+    transform: scale(1.1);
+  }
+}
+
+.section {
+  &__intro {
+    padding: 0 10rem 10rem 10rem;
+    text-align: center;
+
+    @media only screen and(max-width: 600px) {
+      padding: 0 5rem 5rem 5rem;
+    }
+
+    background-image: url("../images/bg-curvy-desktop.svg");
+    background-color: $bg-intro-signup;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: bottom;
+  }
+
+  &__features {
+    background-color: $bg-main;
+    padding: 5rem 10rem 10rem 10rem;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+    @media only screen and(max-width: 600px) {
+      padding: 5rem;
+    }
+  }
+
+  &__how-it-works {
+    display: flex;
+    justify-content: space-between;
+    padding: 5rem 10rem 10rem 10rem;
+    background-color: $bg-main;
+    align-items: center;
+
+    @media only screen and(max-width: 600px) {
+      flex-direction: column;
+      padding: 5rem;
+    }
+  }
+
+  &__reviews {
+    background-color: $bg-main;
+    padding: 5rem 10rem 30rem 10rem;
+    position: relative;
+
+    @media only screen and(max-width: 600px) {
+      padding: 5rem 5rem 30rem 5rem;
+    }
+  }
+}
+
+.footer {
+  background-color: $bg-footer;
+  position: relative;
+  padding: 25rem 10rem 10rem 10rem;
+
+  @media only screen and(max-width: 600px) {
+    padding: 25rem 4rem 10rem 4rem;
+  }
+
+  &__form {
+    width: 50%;
+    margin: 0 auto;
+    text-align: center;
+    background-color: $bg-intro-signup;
+    padding: 4rem;
+    border-radius: 1rem;
+    box-shadow: 0.5rem 0.5rem 1rem black;
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    transform: translate(-50%, 50%);
+
+    @media only screen and(max-width: 900px) {
+      width: 70%;
+    }
+
+    @media only screen and(max-width: 600px) {
+      width: 90%;
+    }
+  }
+
+  &__logo {
+    margin-bottom: 3rem;
+  }
+
+  &__sections {
+    display: flex;
+    justify-content: space-around;
+
+    @media only screen and(max-width: 900px) {
+      flex-direction: column;
+    }
+  }
+
+  &__section {
+    flex: 0 0 17%;
+    list-style: none;
+    color: white;
+    font-size: 1.4rem;
+    margin-right: 3rem;
+    padding-left: 2rem;
+    margin-bottom: 3rem;
+
+    &-social {
+      display: flex;
+
+      @media only screen and(max-width: 900px) {
+        margin: 0 auto;
+      }
+    }
+  }
+
+  &__item {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 2rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+
+    &:hover {
+      transform: scale(1.1);
+    }
+
+    &-icon {
+      margin-right: 2rem;
+      width: 2rem;
+      height: auto;
+    }
+  }
+}
+
+.social {
+  width: 4rem;
+  height: 4rem;
+  border-radius: 50%;
+  border: 1px solid white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 2rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+
+  &:hover {
+    background-color: white;
+  }
+
+  &:hover &-icon {
+    color: $bg-footer;
+  }
+
+  &-icon {
+    width: 3rem;
+    height: 3rem;
+    color: white;
+  }
+}
+
+.location-icon {
+  width: 5rem;
+  height: auto;
+  margin-block-start: 0.5rem;
+
+  @media only screen and(max-width: 900px) {
+    width: 2rem;
+  }
+}
+
+.reviews {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+
+  @media only screen and(max-width: 900px) {
+    flex-direction: column;
+  }
+
+  &__quote {
+    position: absolute;
+    left: 7rem;
+    top: 1rem;
+    z-index: 1;
+    width: 6rem;
+    height: auto;
+  }
+}
+
+.review {
+  flex: 0 0 30%;
+  background-color: $bg-testimonials;
+  padding: 3rem;
+  border-radius: 0.5rem;
+  margin-bottom: 3rem;
+
+  &__author {
+    margin-top: 3rem;
+    display: flex;
+    align-items: center;
+  }
+
+  @media only screen and(max-width: 600px) {
+    flex: 0 0 90%;
+  }
+}
+
+.avatar {
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  margin-right: 1rem;
+}
+
+.hiw-image {
+  max-width: 100%;
+  height: auto;
+}
+
+.hiw__img {
+  width: 48%;
+
+  @media only screen and(max-width: 600px) {
+    width: 100%;
+    margin-bottom: 4rem;
+  }
+}
+
+.hiw__text {
+  width: 48%;
+
+  @media only screen and(max-width: 600px) {
+    width: 100%;
+  }
+}
+
+.feature {
+  flex: 0 0 48%;
+  text-align: center;
+
+  @media only screen and(max-width: 600px) {
+    flex: 0 0 100%;
+  }
+
+  padding: 5rem;
+
+  @media only screen and(max-width: 600px) {
+    padding: 0;
+    margin-bottom: 6rem;
+  }
+
+  &__image {
+    margin-bottom: 2rem;
+    max-width: 100%;
+    height: auto;
+  }
+
+  &__title {
+    color: white;
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+  }
+
+  &__desc {
+    color: white;
+    font-size: 1.5rem;
+    font-weight: 400;
+    width: 65%;
+    margin: 0 auto;
+
+    @media only screen and(max-width: 600px) {
+      width: 100%;
+    }
+  }
+}
+
+::selection {
+  color: $bg-main;
+  background-color: white;
+}
